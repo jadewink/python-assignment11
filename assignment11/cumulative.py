@@ -26,5 +26,5 @@ def cumulative(row):
 cumulative_df['cumulative'] = cumulative_df['total_price'].cumsum()
 
 # Line Plot
-cumulative_df.plot(x="order_id", y=["total_price"], kind="line", title="Totals by Order ID")
+cumulative_df.plot(x="order_id", y=["cumulative"], kind="line", title="Cumulative Revenue vs. Order ID")
 plt.show()
