@@ -28,3 +28,26 @@ cumulative_df['cumulative'] = cumulative_df['total_price'].cumsum()
 # Line Plot
 cumulative_df.plot(x="order_id", y=["cumulative"], kind="line", title="Cumulative Revenue vs. Order ID")
 plt.show()
+
+# Task 3: Interactive Visualizations with Plotly
+# Load the Plotly wind dataset, via the following:
+import plotly.express as px
+import plotly.data as pldata
+
+df = pldata.wind(return_type='pandas')
+
+# Clean the data. You need to convert the 'strength' column to a float.
+df['strength'] = df['strength'].str.replace(r'[^\d\.]', '', regex=True).astype(float)
+
+print("First 10 rows:\n", df.head(10))
+print("\nLast 10 rows:\n", df.tail(10))
+
+# Create an interactive scatter plot of strength vs. frequency, with colors based on the direction.
+df = pldata.wind(return_type='pandas') # Returns a DataFrame.  plotly.data has a number of sample datasets included.
+fig = px.scatter(df, x='strength', y='frequency', color='direction',
+                 title="Strength vs. Frequency")
+                #  , hover_data=["petal_length"])
+fig.write_html("wind.html", auto_open=True)
+
+# Do not try fig.show()!  This sometimes works, but usually it just hangs.
+# Save and load the HTML file, as wind.html. Verify that the plot works correctly.
