@@ -8,7 +8,7 @@ df = pldata.gapminder(return_type='pandas', datetimes=True) # This loads one of 
 # Initialize Dash app
 app = Dash(__name__) # This creates the app object, to wich various things are added below. 
 # __name__ is the name of the running Python module, which is your main module in this case
-
+server = app.server # 
 # You want a dropdown that has each unique country name. 
 # You create a Series called countries that is the list of countries with duplicates removed. 
 countries = df['country'].drop_duplicates()
