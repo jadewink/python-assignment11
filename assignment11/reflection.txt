@@ -1,0 +1,13 @@
+Create a file in the assignment11 folder called reflection.txt, and put in the following thoughts:
+
+Reflect on the differences between static and interactive visualizations.
+Write a short paragraph discussing the advantages of using dashboards for real-time data exploration.
+Explain how interactive tools like Plotly and Dash can improve data communication in professional settings.
+
+Static visualizations are like snapshots—they're easy to read but don’t let you dig deeper. 
+Interactive visualizations, let you explore the data by zooming, filtering, 
+and hovering, which makes it easier to spot trends and patterns.
+Dashboards are great for real-time data because they update instantly and let you explore information at first glance. 
+They're perfect for quick decision-making.
+Tools like Plotly and Dash make data more engaging by turning it into interactive visuals. 
+This helps the user understand the data and come to conclusions, and communication can be clear and effective.
